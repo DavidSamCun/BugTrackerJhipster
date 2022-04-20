@@ -11,4 +11,6 @@ public interface TicketRepositoryWithBagRelationships {
     List<Ticket> fetchBagRelationships(List<Ticket> tickets);
 
     Page<Ticket> fetchBagRelationships(Page<Ticket> tickets);
+
+
 }

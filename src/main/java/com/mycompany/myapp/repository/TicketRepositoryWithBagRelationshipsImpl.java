@@ -1,6 +1,8 @@
 package com.mycompany.myapp.repository;
 
 import com.mycompany.myapp.domain.Ticket;
+
+import java.awt.print.Pageable;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -27,6 +29,10 @@ public class TicketRepositoryWithBagRelationshipsImpl implements TicketRepositor
     public Page<Ticket> fetchBagRelationships(Page<Ticket> tickets) {
         return new PageImpl<>(fetchBagRelationships(tickets.getContent()), tickets.getPageable(), tickets.getTotalElements());
     }
+
+//    public Page<Ticket> findAllByOrderByDueDateAsc(Pageable pageable){
+//
+//    }
 
     @Override
     public List<Ticket> fetchBagRelationships(List<Ticket> tickets) {

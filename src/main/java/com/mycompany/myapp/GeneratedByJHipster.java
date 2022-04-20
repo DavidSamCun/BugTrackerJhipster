@@ -11,3 +11,7 @@ import javax.annotation.Generated;
 @Target({ ElementType.TYPE })
 public @interface GeneratedByJHipster {
 }
+
+//    public Page<Ticket> findAllByOrderByDueDateAsc(Pageable pageable) {
+//        return null;
+//    }

@@ -1,13 +1,18 @@
 package com.mycompany.myapp;
 
 import com.mycompany.myapp.config.ApplicationProperties;
+
+import java.awt.print.Pageable;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Optional;
 import javax.annotation.PostConstruct;
+
+import com.mycompany.myapp.domain.Ticket;
 import org.apache.commons.lang3.StringUtils;
+import org.ehcache.shadow.org.terracotta.offheapstore.paging.Page;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -100,4 +105,9 @@ public class BugTrackerJhipsterApp {
             env.getActiveProfiles().length == 0 ? env.getDefaultProfiles() : env.getActiveProfiles()
         );
     }
+
+//    Page<Ticket> findAllByOrderByDueDateAsc(Pageable pageable) {
+//        return null;
+//    }
+
 }
